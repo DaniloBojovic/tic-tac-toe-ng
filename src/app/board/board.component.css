@@ -1,0 +1,15 @@
+mat-grid-tile {
+    background: lightblue;
+  }
+
+  .mat-stroked-button{
+    margin: 5px;
+}
+
+.container {
+  margin : 40px;
+}
+
+.mat-stroked-button {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,15 @@
+<div class="container">
+<button mat-stroked-button color="primary" (click)="newGame()">
+    New Game
+</button>
+<mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let s of squares">
+        <button mat-button [disabled]="s.isDisabled" (click)="onRowClicked(s)" *ngIf="s.value; else elseBlock"><b>{{s.value}}</b></button>
+        <ng-template #elseBlock>
+            <button mat-button [disabled]="s.isDisabled" (click)="onRowClicked(s)">
+                <mat-icon>help_outline</mat-icon>
+            </button>
+        </ng-template> 
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
